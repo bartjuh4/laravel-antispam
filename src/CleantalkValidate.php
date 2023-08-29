@@ -4,6 +4,8 @@ namespace cleantalk\antispam;
 
 use cleantalk\antispam\lib\Cleantalk\Antispam\Cleantalk;
 use cleantalk\antispam\lib\Cleantalk\Antispam\CleantalkRequest;
+use function header;
+use function headers_sent;
 
 class CleantalkValidate
 {
@@ -500,6 +502,9 @@ class CleantalkValidate
     {
         // AJAX
         if (request()->expectsJson()) {
+            if (headers_sent() === false) {
+                header("HTTP/1.0 403 Forbidden");
+            }
             die(json_encode(['apbct' => ['blocked' => true, 'comment' => $comment,]]));
 
             // File exists?
