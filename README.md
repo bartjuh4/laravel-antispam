@@ -1,7 +1,7 @@
 # laravel-antispam
 
 ## How to use:
-1) Require the `cleantalk/laravel-antispam` package
+1) `composer require cleantalk/laravel-antispam`
 2) Register the `cleantalk_antispam` middleware into your  Kernel.php
 3) Add CLEANTALK_ENABLED and CLEANTALK_API_KEY to your .env or publish the config file
 4) Include JS into your root blade template (into head block) `@include('cleantalk::cleantalk')`
