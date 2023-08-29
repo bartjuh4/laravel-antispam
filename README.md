@@ -1,13 +1,12 @@
 # laravel-antispam
 
 ## How to use:
-1) Require the `cleantalk/laravel-antispam` module
-2) Register the `CleantalkServiceProvider` service provider into your app.php
-3) Register the `cleantalk_antispam` middleware into your  Kernel.php
-4) Load the  publishes by  `php artisan vendor:publish` command
-5) Edit `config/cleantalk.php` configuration file
-6) Include JS into your root blade template (into head block) `@include('cleantalk::cleantalk')`
-7) Add the middleware to your routes which requires the anti-spam protection (usually form hanled route)
+1) Require the `cleantalk/laravel-antispam` package
+2) Register the `cleantalk_antispam` middleware into your  Kernel.php
+3) Load the  publishes by  `php artisan vendor:publish` command
+4) Edit `config/cleantalk.php` configuration file
+5) Include JS into your root blade template (into head block) `@include('cleantalk::cleantalk')`
+6) Add the middleware to your routes which requires the anti-spam protection (usually form hanled route)
 
 ## Details:
 1) Open the terminal in the root of your laravel application and run command to require anti-spam module: `composer require cleantalk/laravel-antispam`
