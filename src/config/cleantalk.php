@@ -1,6 +1,6 @@
 <?php
 
 return [
-	'enabled' => false,
-	'apikey' => ''
+	'enabled' => env('CLEANTALK_ENABLED', false),
+	'apikey' => ENV('CLEANTALK_API_KEY', ''),
 ];
