@@ -19,7 +19,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "cleantalk\antispam\CleantalkServiceProvider"
+                "cleantalk\\antispam\\CleantalkServiceProvider"
             ]
         }
     },
