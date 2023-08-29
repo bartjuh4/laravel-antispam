@@ -39,7 +39,7 @@ class CleantalkValidate
         // Skip check if
         if (
             $skip || // Skip flag set by apbct_get_fields_any()
-            (!$sender_email && !$general_postdata_test) || // No email detected and general post data test is disabled
+            !$sender_email || // No email detected
             ($registration && !$registrations_test)
         )
             $skip = true;
@@ -106,7 +106,7 @@ class CleantalkValidate
 
             // Common
             'remote_addr' => $_SERVER['REMOTE_ADDR'],
-            'USER_AGENT' => htmlspecialchars($_SERVER['HTTP_USER_AGENT']),
+            'USER_AGENT' => htmlspecialchars($_SERVER['HTTP_USER_AGENT'] ?? ''),
             'REFFERRER' => htmlspecialchars($_SERVER['HTTP_REFERER'] ?? ''),
             'page_url' => isset($_SERVER['SERVER_NAME'], $_SERVER['REQUEST_URI']) ? htmlspecialchars($_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']) : null,
             // 'cms_lang'        => substr(locale_get_default(), 0, 2),
