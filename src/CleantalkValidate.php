@@ -499,7 +499,7 @@ class CleantalkValidate
     static private function apbct_die($comment, $registration = false, $additional_text = null): void
     {
         // AJAX
-        if (isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+        if (request()->expectsJson()) {
             die(json_encode(['apbct' => ['blocked' => true, 'comment' => $comment,]]));
 
             // File exists?
