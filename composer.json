@@ -16,7 +16,13 @@
         }
     ],
     "minimum-stability": "dev",
-
+    "extra": {
+        "laravel": {
+            "providers": [
+                "cleantalk\antispam\CleantalkServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "cleantalk\\antispam\\":"src/"
